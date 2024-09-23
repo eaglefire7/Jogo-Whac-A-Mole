@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Whac-A-Mole</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Whac-A-Mole: Duelo de Jogadores</h1>
+  
+  <div class="game-info">
+    <input type="text" id="player1Name" placeholder="Jogador 1 - Digite seu nome">
+    <input type="text" id="player2Name" placeholder="Jogador 2 - Digite seu nome">
+    <button id="startButton">Iniciar Jogo</button>
+    <div class="scoreboard">
+      <h2 id="player1Score">Jogador 1 (0)</h2>
+      <h2 id="player2Score">Jogador 2 (0)</h2>
+      <h2 id="timer">Tempo: 45s</h2>
+    </div>
+  </div>
+  
+  <div id="gameBoard"></div>
+  
+  <div id="result" class="hidden">
+    <h2>Resultado Final</h2>
+    <p id="finalScore"></p>
+    <p id="clicksInfo"></p>
+    <p id="winner"></p>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
