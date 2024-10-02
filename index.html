@@ -1,34 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Whac-A-Mole</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whac-A-Mole Neon</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Whac-A-Mole: Duelo de Jogadores</h1>
-  
-  <div class="game-info">
-    <input type="text" id="player1Name" placeholder="Jogador 1 - Digite seu nome">
-    <input type="text" id="player2Name" placeholder="Jogador 2 - Digite seu nome">
-    <button id="startButton">Iniciar Jogo</button>
-    <div class="scoreboard">
-      <h2 id="player1Score">Jogador 1 (0)</h2>
-      <h2 id="player2Score">Jogador 2 (0)</h2>
-      <h2 id="timer">Tempo: 45s</h2>
+  <!-- Tela Inicial -->
+  <div id="startScreen" class="screen">
+    <h1 class="neon">Whac-A-Mole Neon</h1>
+    <button id="startButton" class="neonButton">Jogar</button>
+  </div>
+
+  <!-- Tela de Cadastro de Jogadores -->
+  <div id="playerFormScreen" class="screen hidden">
+    <h1 class="neon">Cadastro de Jogadores</h1>
+    <form id="playerForm">
+      <label class="neonLabel" for="player1Name">Jogador 1:</label>
+      <input type="text" id="player1Name" name="player1Name" required>
+
+      <label class="neonLabel" for="player2Name">Jogador 2:</label>
+      <input type="text" id="player2Name" name="player2Name" required>
+
+      <button type="submit" class="neonButton">Iniciar Jogo</button>
+    </form>
+  </div>
+
+  <!-- Tela de Jogo -->
+  <div id="gameScreen" class="screen hidden">
+    <div id="header">
+        <h1 class="neon">Jogo Whac-A-Mole</h1>
+        <div id="playerNames" class="neon">
+            <span id="player1NameDisplay"></span> vs <span id="player2NameDisplay"></span>
+        </div>
+        <div id="controls">
+          <div id="timer" class="neon">Tempo: 45s</div>
+          <h3 id="winner" class="neon"></h3>
+        </div>
+        <div id="resultDisplay" class="resultDisplay hidden">
+          <div id="player1Results" class="resultColumn"></div>
+          <div id="colorClicksDisplay" class="resultColumn"></div>
+          <div id="player2Results" class="resultColumn"></div>
+      </div>
     </div>
+    <!-- Apuração do Resultado na Mesma Tela -->
+    
+    
+    <div id="gameBoard"></div>
+    <div id="playerScoreDisplay" class="scoreDisplay">Jogador: 0 pontos</div>
+    <button id="startPlayer2Button" class="neonButton hidden">Iniciar Jogador 2</button>
+
+    
   </div>
-  
-  <div id="gameBoard"></div>
-  
-  <div id="result" class="hidden">
-    <h2>Resultado Final</h2>
-    <p id="finalScore"></p>
-    <p id="clicksInfo"></p>
-    <p id="winner"></p>
-  </div>
-  
+
   <script src="script.js"></script>
 </body>
 </html>
