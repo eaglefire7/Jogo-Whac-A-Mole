@@ -58,7 +58,7 @@ input[type="text"] {
   display: grid;
   grid-template-columns: repeat(4, 100px);
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .mole {
@@ -87,8 +87,8 @@ input[type="text"] {
 }
 
 .scoreDisplay {
-  margin: 10px;
-  font-size: 1.5rem;
+  margin: 0px;
+  font-size: 1.8rem;
   color: #00FFFF;
 }
 
@@ -100,8 +100,9 @@ input[type="text"] {
 }
 
 #playerNames {
-    font-size: 1.5rem;
-    margin-top: 10px; /* Espaço acima dos nomes dos jogadores */
+    color:yellow ;
+    font-size: 3rem;
+    margin-top: 20px; /* Espaço acima dos nomes dos jogadores */
 }
 
 #controls {
@@ -112,6 +113,7 @@ input[type="text"] {
 }
 
 #winner {
+    padding: 10px;
     margin-top: 10px; /* Espaçamento acima do vencedor */
     font-size: 2.5rem; /* Tamanho da fonte do vencedor */
     text-align: center;
@@ -121,11 +123,11 @@ input[type="text"] {
     display: flex;
     justify-content: space-between; /* Distribuir os resultados entre os jogadores */
     width: 100%;
-    margin-top: 0px;
+    margin-top: 20px;
     text-align: center;
 }
 
 .resultColumn {
-    flex: 1;
-    font-size: 2.2rem; /* Ajustando o tamanho da fonte */
+    flex: 1 0 0;
+    font-size: 1.5rem; /* Ajustando o tamanho da fonte */
 }
